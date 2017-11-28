@@ -1,0 +1,13 @@
+import time
+import sys
+sys.setcheckinterval(128)
+
+
+frequency = 256  # Hz
+period = 1.0/frequency
+
+while True:
+    time_before = time.time()
+    
+    while (time.time() - time_before) < period:
+        time.sleep(0.0001)  # precision here
