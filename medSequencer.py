@@ -29,13 +29,13 @@ Trig2			= 70
 Trig1			= 69
 Pad9			= 68
 Pad8			= 67
-Pad7			= 66
+Pad7			= 66 #bottom left pad
 Pad6			= 65
 Pad5			= 64
-Pad4			= 63
+Pad4			= 63 #mid left pad
 Pad3			= 62
 Pad2			= 61
-Pad1			= 60
+Pad1			= 60 #top left cymbal pad
 
 sON  = 0x99		#global channel 10 signal ON
 vON  = 99		#velocity:99
