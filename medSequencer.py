@@ -3,11 +3,11 @@ sys.setcheckinterval(1)
 
 import rtmidi_python as rtmidi
 midi_out = rtmidi.MidiOut()
-midi_out.open_port(3)							# port starts with 0 from available OUT to rtmidi/OS
+midi_out.open_port(2)							# port starts with 0 from available OUT to rtmidi/OS
 
 #import random
 
-BPM 			= 120.0   						# Beats per minute
+BPM 			= 112.0   						# Beats per minute
 BPS 			= BPM 			/ 	60.0 		# Beats per second 60 seconds in a minute
 beatsPerBar 	= 4.0 							# 4/4 Timing
 ratio 			= BPS 			/ beatsPerBar
@@ -21,21 +21,21 @@ NThirtySecond	= NSixteenth	* 0.5
 NSixtyForth		= NThirtySecond	* 0.5
 
 #standard SPD-SX Mapping
-FtSw2 			= 74 # D6
-FtSw1			= 73 # C#6
-Trig4			= 72 # C6
-Trig3			= 71 # B5
-Trig2			= 70 # A#5
-Trig1			= 69 # A5
-Pad9			= 68 # G#5
-Pad8			= 67 # G5
-Pad7			= 66 # F#5 #bottom left pad
-Pad6			= 65 # F5
-Pad5			= 64 # E5
-Pad4			= 63 # D#5 #mid left pad
-Pad3			= 62 # D5
-Pad2			= 61 # C#5
-Pad1			= 60 # C5 #top left cymbal pad
+FtSw2 			= 74
+FtSw1			= 73
+Trig4			= 72
+Trig3			= 71
+Trig2			= 70
+Trig1			= 69
+Pad9			= 68
+Pad8			= 67
+Pad7			= 66
+Pad6			= 65
+Pad5			= 64
+Pad4			= 63
+Pad3			= 62
+Pad2			= 61
+Pad1			= 60
 
 sON  = 0x99		#global channel 10 signal ON
 vON  = 99		#velocity:99
