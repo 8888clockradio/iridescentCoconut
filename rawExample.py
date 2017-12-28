@@ -16,7 +16,20 @@ midi_out.open_port(1)
 
 midi_out.send_message([0x99, 73, 127]) # Note on
 midi_out.send_message([0x99, 73, 0]) # Note off
+
 ##SNIP###
+
+
+import rtmidi_python as rtmidi
+
+def callback(message, time_stamp):
+    print message, time_stamp
+
+midi_in = rtmidi.MidiIn()
+midi_in.callback = callback
+midi_in.open_virtual_port('midi test port')
+
+# do something else here (but don't quit)
 
 
 # 0xB9 incoming main knob from BeatStep
@@ -24,7 +37,8 @@ midi_out.send_message([0x99, 73, 0]) # Note off
 #read commands from first available device
 ##SNIP###
 midi_in = rtmidi.MidiIn()
-midi_in.open_port(1)
+midi_in.open_port(0)
+midi_in.ignore_types( False, False, False ) #read sysx data
 
 while True:
     message, delta_time = midi_in.get_message()
