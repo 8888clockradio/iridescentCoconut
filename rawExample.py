@@ -28,6 +28,7 @@ def callback(message, time_stamp):
 midi_in = rtmidi.MidiIn()
 midi_in.callback = callback
 midi_in.open_virtual_port('midi test port')
+midi_in.ignore_types( False, False, False ) #read sysx data
 
 # do something else here (but don't quit)
 
