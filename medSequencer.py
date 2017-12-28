@@ -21,21 +21,21 @@ NThirtySecond	= NSixteenth	* 0.5
 NSixtyForth		= NThirtySecond	* 0.5
 
 #standard SPD-SX Mapping
-FtSw2 			= 74 # D6
-FtSw1			= 73 # C#6
-Trig4			= 72 # C6
-Trig3			= 71 # B5
-Trig2			= 70 # A#5
-Trig1			= 69 # A5
-Pad9			= 68 # G#5
-Pad8			= 67 # G5
-Pad7			= 66 # F#5 #bottom left pad
-Pad6			= 65 # F5
-Pad5			= 64 # E5
-Pad4			= 63 # D#5 #mid left pad
-Pad3			= 62 # D5
-Pad2			= 61 # C#5
-Pad1			= 60 # C5 #top left cymbal pad
+FtSw2 			= 74 # D4
+FtSw1			= 73 # C#4
+Trig4			= 72 # C4
+Trig3			= 71 # B3
+Trig2			= 70 # A#3
+Trig1			= 69 # A3
+Pad9			= 68 # G#3
+Pad8			= 67 # G3
+Pad7			= 66 # F#3 #bottom left pad
+Pad6			= 65 # F3
+Pad5			= 64 # E3
+Pad4			= 63 # D#3 #mid left pad
+Pad3			= 62 # D3
+Pad2			= 61 # C#3
+Pad1			= 60 # C3 #top left cymbal pad
 
 sON  = 0x99		#global channel 10 signal ON
 vON  = 99		#velocity:99
