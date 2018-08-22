@@ -26,10 +26,10 @@ h = 1000
 
 from pycuda.elementwise import ElementwiseKernel
 complex_gpu = ElementwiseKernel(
-    "pycuda::complex<float> *z, pycuda::complex<float> *q, int *iteration, int maxiter",
-        "for (int n=0; n < maxiter; n++) {z[i] = (z[i]*z[i])+q[i]; if (abs(z[i]) > 2.0f) {iteration[i]=n; z[i] = pycuda::complex<float>(); q[i] = pycuda::complex<float>();};}",
-    "complex5",
-    preamble="#include <pycuda-complex.hpp>",)
+        "pycuda::complex<float> *z, pycuda::complex<float> *q, int *iteration, int maxiter",
+            "for (int n=0; n < maxiter; n++) {z[i] = (z[i]*z[i])+q[i]; if (abs(z[i]) > 2.0f) {iteration[i]=n; z[i] = pycuda::complex<float>(); q[i] = pycuda::complex<float>();};}",
+        "complex5",
+        preamble="#include <pycuda-complex.hpp>",)
 
 def calculate_z_gpu(q, maxiter, z):
     output = nm.resize(nm.array(0,), q.shape)
@@ -98,7 +98,7 @@ def calculate_z_serial(q, maxiter, z):
     for i in range(len(q)):
         if i % 100 == 0:
             # print out some progress info since it is so slow...
-            print "%0.2f% complete" % (1.0/len(q) * i * 100)
+            print "%0.2f%% complete" % (1.0/len(q) * i * 100)
         for iter in range(maxiter):
             z[i] = z[i]*z[i] + q[i]
             if abs(z[i]) > 2.0:
@@ -202,3 +202,4 @@ class Mandelbrot(object):
 # test the class
 if __name__ == '__main__':
     test = Mandelbrot()
+

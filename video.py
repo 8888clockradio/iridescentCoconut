@@ -24,7 +24,7 @@ t.speed(0)
 t.pensize(2)
 t.ht()
 angle = 45
-speed = 6
+speed = 22
 steps = s.count('F')+s.count('G')
 stepsSoFar = 0
 for i in s:
