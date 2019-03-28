@@ -13,8 +13,8 @@ for port_name in midi_inSide.ports:
 for port_name in midi_outSide.ports:
 	print port_name
 
-midi_inSide.open_port(1)
 midi_inSide.ignore_types( False, False, False ) #read sysx data
+midi_inSide.open_port(1)
 midi_outSide.open_port(8)
 midi_inSide.callback = callback
 
