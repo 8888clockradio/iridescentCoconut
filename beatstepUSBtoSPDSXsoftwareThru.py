@@ -3,6 +3,7 @@ sys.setcheckinterval(1)
 
 import rtmidi_python as rtmidi
 midi_out = rtmidi.MidiOut()
+
 midi_out.open_port(2)				# port starts with 0 from available OUT to rtmidi/OS
 
 def callback(message, time_stamp):
